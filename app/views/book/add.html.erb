@@ -1,0 +1,36 @@
+<html>
+<head></head>
+<style>
+	body{ 
+	background-image: url('http://wallpapercave.com/wp/QLnDcJB.jpg');
+
+	}
+</style>
+<center>
+<div class ="page add">
+	<h2>Create New Record</h2>
+	<%= form_for(:books,url:{controller: "book", action: 'create'}) do |t| %>
+	<table summary= "Book from fields">
+		<tr>
+			<th>Name</th>
+			<td><%= t.text_field(:name) %></td>
+		</tr>
+		<tr>
+			<th>Price</th>
+			<td><%= t.text_field(:price) %></td>
+		</tr>
+		<tr>
+			<th> Author</th>
+			<td><%= t.text_field(:author) %></td>
+		</tr>
+
+	</table>
+	<div class = "form_button">
+		<%= submit_tag("create book") %>
+	</div>
+	<% end %>
+</div>
+	
+<button><%=link_to "Back to list", controller:"book", action:'list',class: "back-list" %></button>
+
+</center>

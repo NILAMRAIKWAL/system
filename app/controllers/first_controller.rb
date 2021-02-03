@@ -1,0 +1,6 @@
+class FirstController < ApplicationController
+
+
+
+end
+  

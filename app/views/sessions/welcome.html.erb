@@ -1,0 +1,67 @@
+<html>
+<head>
+	<center>
+<title>Welcome to book library</title>
+</center>
+<style>
+body{ 
+	background-image: url('https://assets.entrepreneur.com/content/3x2/1300/publish-a-book-and-prosper-as-a-small-biz-owner.jpg');
+
+	}
+
+ul{ width:211px;
+ margin:0;
+ padding:0; 
+ list-style:none;
+ height:36px;
+ line-height:4px;
+ background-color:red; 
+ font-family: Arial, Helvetica, sans-serif;
+ font-size:15px;
+}
+li{
+	float:left;
+	border-right:1px solid black;
+}
+a{
+display:block;
+padding:15px;
+color:#fff;
+text-decoration:none;
+}
+a:hover{
+	background-color:#156ee2;
+}
+</style>
+</head>
+
+
+
+<div class="nav">	
+<ul>
+<li><a href='book\list'>show books</a></li>
+<li><a href='book\add'> books add</a></li>
+
+
+
+
+</ul>
+</div>
+</body>
+
+<br>
+
+<button><%= link_to "Home",{:action => 'index', :controller =>'home'}%></button>
+
+
+
+
+
+
+
+
+
+
+
+
+

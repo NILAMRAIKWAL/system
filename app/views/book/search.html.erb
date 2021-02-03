@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<style>
+	body{ 
+	background-image: url('http://wallpapercave.com/wp/QLnDcJB.jpg');
+
+	}
+</style>
+<div class ="Book Search">
+	<h2>search book</h2>
+	<%= form_for books_path, :method =>'get' do %>
+         <%= text_field_tag :search, params(:search) %>
+            <%= submit_tag "search" %>
+
+	 
+	<% end %>
+</div>
+</html>

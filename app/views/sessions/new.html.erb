@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<style>
+	body{ 
+	background-image: url('http://wallpapercave.com/wp/QLnDcJB.jpg');
+
+	}
+</style>
+<center>
+<p id='alert'><%= alert %></p>
+<h1> Login</h1>
+
+<%= form_tag sessions_path do |form| %>
+<div class ="field">
+	<%= label_tag :email %>
+	<%= text_field_tag :email %>
+</div>
+<div class= 'field'>
+	<%= label_tag :password %>
+	<%= password_field_tag :password %>
+</div>
+<div class="from_button">
+	<%= submit_tag("Login") %>
+</div>
+<% end %>
+</center>
+
+<%= link_to "New Userss", new_userss_path %>
+

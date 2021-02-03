@@ -1,0 +1,115 @@
+
+<html>
+<head> 
+  </head>
+<style>
+	body{ 
+	background-image: url('https://jooinn.com/images/background-27.png');
+
+	}
+
+</style>
+<!---
+<h1>Book list</h1>
+
+
+<% if @books.blank? %>
+	<p>These  are not  any books current our system</p>
+<% else %>
+
+<p>these are the current books in our system</p>
+<ul id ="books">
+
+<% @books.each do |c| %>
+<li><%=link_to c.name,{:action=>'show', :controller=>'book',:id=> c.id} -%></li>
+<% end %>
+</ul>
+<% end %>
+<%= link_to "Add nwe Book",{:action => 'new', :controller =>'book'}%>
+<%= link_to "Home",{:action => 'welcome', :controller =>'first'}%>
+--->	
+
+<center>
+<% @book_title="Book" %>
+
+<!--<%= link_to "Back to Home", controller: "sessions", action: 'welcome' , class: "back-link" %> -->
+
+<div class ="Book Index">
+	<h1> Books </h1>
+
+	<style>
+		table, th, td {
+		border:1px solid black;
+		border-collapse: collapse;
+		}
+		th, td {
+		 padding: 5px;
+		}
+	</style>
+
+
+	<!--<%= link_to "Add New Book", controller: "book", action: 'new',class: "action new" %> -->
+
+	<table class ="listing" summary ="book List" style ="width:15%"  "center:33%">
+		<tr class ="header">
+			<th>Name</th>
+			<th>actions</th>
+		</tr>
+		<h4>There are <%= Book.count %> books</h4>
+
+	<% @books.each do |b| %>
+	  <tr class="<%= cycle('odd','even') %>">
+			<td> <%= b.name %> </td>
+			<td class = "actions">
+				<button><%= link_to "Show", action:'show', id: b.id, class: "action show" %></button>
+				<button><%= link_to "Edit", action:'edit', id: b.id, class: "action edit" %></button>
+				<button><%= link_to "Delete", action:'delete', id: b.id, class: "action delete" %></button>
+				
+			</td>
+		    </tr>
+		   <% end %>
+	       </table>
+           </div><br>
+           <br>
+           
+<button><%= link_to "Back to Home", controller: "sessions", action: 'welcome' , class: "back-link" %></button>
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

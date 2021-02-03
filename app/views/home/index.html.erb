@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+body{ 
+	background-image: url('https://wallpapertag.com/wallpaper/full/f/6/c/841567-library-background-images-1920x1080-hd-for-mobile.jpg');
+
+	}
+
+ul{ width:160px;
+ margin:0;
+ padding:0; 
+ list-style:none;
+ height:35px;
+ line-height:3px;
+ background-color:darkorange; 
+ font-family: Arial, Helvetica, sans-serif;
+ font-size:15px;
+}
+li{
+	float:left;
+	border-right:0px solid black;
+}
+a{
+display:block;
+padding:15px;
+color:#fff;
+text-decoration:none;
+}
+a:hover{
+	background-color:#156ee2;
+}
+</style>
+</head>
+<br>
+<br>
+<br>
+<center>
+<div class="nav">	
+<ul>
+<% if current_userss %>
+Logged in as <%= current_userss.email %>
+<li><%= link_to 'Log Out',logout_path %></li>
+<%else%>
+<br>
+
+<li><%= link_to 'Sing Up', signup_path %></li>
+<li><%= link_to 'Log In', login_path %></li>
+</ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+	<center>
+<h1> welcome to book library</h1>
+</center>
+
+
+</center>
+</body>
+<%end%>
+<p id='notice'><%=notice%></p>
